@@ -1,0 +1,242 @@
+{
+  "meta": {
+    "name": "MandateLab Security Runbook",
+    "description": "A matte-black, evidence-first interface for adversarial testing of autonomous financial authority on Monad.",
+    "source_references": [
+      "https://mandatelab.vercel.app/",
+      "https://wick-monad.vercel.app/",
+      "https://guardian-jarvis.vercel.app/",
+      "https://ao-alitvjaber-1829s-projects.vercel.app/",
+      "https://monad.getava.xyz/",
+      "https://turnkey.com/",
+      "https://sentry.io/",
+      "https://stripe.com/"
+    ],
+    "created_at": "2026-08-08"
+  },
+  "design_system": {
+    "color": {
+      "palette_type": "split-complementary",
+      "primary": {
+        "hex": "#836EF9",
+        "role": "Monad identity, active controls, and runtime authority"
+      },
+      "secondary": {
+        "hex": "#F2EFE8",
+        "role": "Warm high-contrast editorial text"
+      },
+      "accent": {
+        "hex": "#C7BBFF",
+        "role": "Policy hashes, run metadata, and focused states"
+      },
+      "neutral": {
+        "scale": ["#07070A", "#09090D", "#0E0D13", "#14121A", "#797382", "#AAA3B4", "#F2EFE8"],
+        "usage": "Near-black page and report surfaces with warm gray secondary text and off-white primary text"
+      },
+      "semantic": {
+        "success": "#7EE2A8",
+        "warning": "#F1C75B",
+        "error": "#FF746C",
+        "info": "#C7BBFF"
+      },
+      "surface": {
+        "background": "#07070A",
+        "card": "#0E0D13",
+        "elevated": "#14121A"
+      },
+      "contrast_strategy": "High-contrast warm text on matte black; purple is reserved for Monad/runtime state, red for injected mutations, and green for killed mutations"
+    },
+    "typography": {
+      "type_scale": {
+        "display": {"size": "clamp(58px, 6.9vw, 88px)", "weight": "700", "line_height": "0.94", "tracking": "-0.072em"},
+        "heading_1": {"size": "clamp(58px, 6.9vw, 88px)", "weight": "700", "line_height": "0.94", "tracking": "-0.072em"},
+        "heading_2": {"size": "clamp(38px, 5vw, 64px)", "weight": "700", "line_height": "0.98", "tracking": "-0.055em"},
+        "heading_3": {"size": "24px", "weight": "700", "line_height": "1.1", "tracking": "-0.035em"},
+        "body": {"size": "16px", "weight": "400", "line_height": "1.65", "tracking": "-0.012em"},
+        "body_small": {"size": "13px", "weight": "400", "line_height": "1.6", "tracking": "0em"},
+        "caption": {"size": "11px", "weight": "500", "line_height": "1.45", "tracking": "0.02em"},
+        "overline": {"size": "10px", "weight": "500", "line_height": "1.4", "tracking": "0.055em"}
+      },
+      "font_families": {
+        "heading": "Manrope, system-ui, sans-serif",
+        "body": "Manrope, system-ui, sans-serif",
+        "mono": "DM Mono, monospace"
+      },
+      "font_style_notes": "Humanist geometric sans for decisive editorial hierarchy; restrained monospace for policy commitments, reason codes, counters, and calldata"
+    },
+    "spacing": {
+      "base_unit": "4px",
+      "scale": ["4px", "8px", "12px", "16px", "24px", "34px", "48px", "68px", "88px", "116px"],
+      "content_density": "comfortable",
+      "section_rhythm": "Large 84-116px section intervals interrupted by compact 42-62px evidence rows"
+    },
+    "layout": {
+      "grid_system": "Asymmetric 12-column editorial grid with nested evidence ledgers",
+      "max_content_width": "1180px",
+      "columns": "12 desktop, 6 tablet, 1 mobile",
+      "gutter": "24px desktop, 14px mobile",
+      "breakpoints": ["680px", "980px", "1180px"],
+      "alignment_tendency": "strict grid with asymmetric hero and left-aligned evidence"
+    },
+    "shape": {
+      "border_radius": {"small": "3px", "medium": "4px", "large": "6px", "pill": "999px only for status dots"},
+      "border_usage": "Subtle 1px rules define report surfaces, rows, and authority boundaries",
+      "divider_style": "Hairline rgba(255,255,255,0.13) with stronger 0.23 separators at major boundaries"
+    },
+    "elevation": {
+      "shadow_style": "Near-flat with one hard offset purple-tinted proof-console shadow",
+      "levels": {
+        "low": "none",
+        "medium": "18px 18px 0 rgba(131,110,249,0.08)",
+        "high": "none"
+      },
+      "depth_cues": "Surface tone, hairline borders, and a single offset shadow rather than blur or glass"
+    },
+    "iconography": {
+      "style": "Technical construction-line symbols with a fractured authority seal",
+      "stroke_weight": "1.5px",
+      "size_scale": ["16px", "20px", "31px", "36px"],
+      "preferred_set": "Custom MandateLab mark plus minimal line icons only when a text label is insufficient"
+    },
+    "motion": {
+      "easing": "cubic-bezier(0.2, 0.8, 0.2, 1)",
+      "duration_scale": {"micro": "120ms", "normal": "220ms", "macro": "360ms"},
+      "entrance_pattern": "Mutation rows appear in sequence after a run with no page-scale theatrics",
+      "exit_pattern": "Immediate state replacement with a short opacity fade",
+      "philosophy": "Minimal functional motion that exposes state change and respects prefers-reduced-motion"
+    },
+    "components": {
+      "button_style": "Square 3px-radius controls; one solid Monad-violet primary and bordered secondary actions",
+      "input_style": "Dark report-field surfaces with 1px borders, visible focus rings, and monospace values",
+      "card_style": "Evidence panels and ledgers, not floating marketing cards; flat surfaces divided into rows",
+      "navigation_pattern": "Compact horizontal brand/navigation/status bar with direct anchor links",
+      "modal_style": "Avoid modals for core proof; use inline state and wallet feedback",
+      "list_style": "Numbered runbook rows with reason codes aligned at the far edge",
+      "component_notes": "Tables, tab panels, policy definition lists, and run ledgers carry the product proof; decorative feature grids are intentionally excluded"
+    }
+  },
+  "design_style": {
+    "aesthetic": {
+      "mood": ["forensic", "confident", "controlled", "skeptical", "precise"],
+      "visual_metaphor": "A security runbook and mutation-test report open beside an onchain authority boundary",
+      "era_influence": "Contemporary developer tooling filtered through 1980s technical manuals and editorial specimen sheets",
+      "genre": "editorial security instrumentation",
+      "personality_traits": ["direct", "meticulous", "honest about limits", "adversarial"],
+      "adjectives": ["matte", "evidence-led", "sharp", "mechanistic", "falsifiable"]
+    },
+    "visual_language": {
+      "complexity": "moderate",
+      "ornamentation": "subtle accents",
+      "whitespace_usage": "Generous around claims, compact inside run data",
+      "visual_weight_distribution": "Heavy left editorial headline balanced by dense right-side proof console",
+      "focal_strategy": "The live five-attack report is the primary proof; all later sections explain its mechanism and boundary",
+      "contrast_level": "high",
+      "texture_usage": "No decorative texture; hierarchy comes from rules, type weight, and semantic color"
+    },
+    "composition": {
+      "hierarchy_method": "Scale contrast plus spatial isolation, followed by ledger density",
+      "balance_type": "asymmetric",
+      "flow_direction": "Hero claim to live report, then policy fixture, concurrency mechanism, Monad fit, and deployment limits",
+      "grouping_strategy": "Evidence grouped by shared authority question rather than generic feature category",
+      "negative_space_role": "Creates confidence around the major claim and prevents diagnostic data from feeling noisy"
+    },
+    "imagery": {
+      "photo_treatment": "No photography in the application surface",
+      "illustration_style": "Generated technical-plate authority seal used only in social and submission header art",
+      "graphic_elements": "Policy hashes, reason codes, status rules, numbered mutation rows, and a fractured seal mark",
+      "pattern_usage": "No repeating decorative patterns",
+      "image_shape": "Asymmetrically cropped wide header art; compact square logo mark"
+    },
+    "interaction_feel": {
+      "feedback_style": "Immediate and explicit with run numbers, killed counts, reason codes, and selected mutation traces",
+      "hover_behavior": "Hairline border or text-color change without lift, glow, or scale",
+      "transition_personality": "snappy",
+      "loading_style": "Prefer truthful pending labels and inline progress over skeleton-card theatre",
+      "microinteraction_density": "low"
+    },
+    "brand_voice_in_ui": {
+      "tone": "Forensic, plainspoken, and willing to state what remains unproven",
+      "formality": "Technical but readable",
+      "cta_style": "Direct imperative such as Run 5 attacks",
+      "empty_state_approach": "Explain the missing evidence and the exact action or event needed to produce it",
+      "error_tone": "Specific reason code plus a short causal explanation; never vague reassurance"
+    }
+  },
+  "visual_effects": {
+    "overview": {
+      "effect_intensity": "subtle-accent",
+      "performance_tier": "lightweight",
+      "fallback_strategy": "Disable entrance motion and preserve every proof state as static HTML under prefers-reduced-motion",
+      "primary_technology": "CSS only"
+    },
+    "background_effects": {
+      "type": "none",
+      "description": "A flat matte-black field intentionally replaces gradients, ambient blobs, and decorative noise",
+      "technology": "CSS solid color",
+      "params": {"color_palette": ["#07070A"], "speed": "0", "density": "0", "opacity": "1", "blend_mode": "normal"}
+    },
+    "particle_systems": {
+      "enabled": false,
+      "type": "none",
+      "description": "Particle systems are excluded to keep the proof surface literal",
+      "technology": "none",
+      "params": {"count": 0, "shape": "none", "size_range": "0px", "movement_pattern": "none", "color_behavior": "none", "interaction": "none", "spawn_area": "none"}
+    },
+    "3d_elements": {
+      "enabled": false,
+      "type": "none",
+      "description": "No 3D elements; the product proof remains a two-dimensional report",
+      "technology": "none",
+      "params": {"renderer": "none", "lighting": "none", "camera": "none", "materials": ["none"], "geometry": ["none"], "post_processing": ["none"], "interaction_model": "none"}
+    },
+    "shader_effects": {
+      "enabled": false,
+      "type": "none",
+      "description": "No shader effects are used",
+      "technology": "none",
+      "params": {"uniforms": ["none"], "vertex_manipulation": "none", "fragment_output": "none", "noise_type": "none", "distortion": "none"}
+    },
+    "scroll_effects": {
+      "parallax": {"enabled": false, "layers": "0", "depth_range": "0", "speed_curve": "none"},
+      "scroll_triggered_animations": {"enabled": false, "trigger_points": ["none"], "animation_type": "none", "scrub_behavior": "none"},
+      "scroll_morphing": {"enabled": false, "description": "No scroll morphing; document flow remains stable and inspectable"}
+    },
+    "text_effects": {
+      "type": "none",
+      "description": "Typography relies on editorial scale and semantic color rather than animated text",
+      "technology": "CSS typography",
+      "params": {"split_strategy": "none", "animation_per_unit": "none", "stagger": "0ms", "effect_style": "none"}
+    },
+    "cursor_effects": {
+      "enabled": false,
+      "type": "none",
+      "description": "The system cursor is preserved for usability",
+      "params": {"shape": "system default", "size": "system default", "blend_mode": "normal", "trail": "none", "interaction_zone": "none"}
+    },
+    "image_effects": {
+      "type": "none",
+      "description": "Brand imagery is static and never competes with the interactive proof",
+      "technology": "optimized raster image",
+      "params": {"filter_pipeline": ["none"], "hover_transform": "none", "reveal_animation": "none", "distortion_type": "none"}
+    },
+    "glassmorphism_neumorphism": {
+      "enabled": false,
+      "style": "none",
+      "params": {"blur_radius": "0px", "transparency": "0", "border_treatment": "1px solid hairlines only", "shadow_type": "one hard offset proof-console shadow", "light_source_angle": "none"}
+    },
+    "canvas_drawings": {
+      "enabled": false,
+      "type": "none",
+      "description": "No canvas drawing is needed for the deterministic runbook",
+      "technology": "none",
+      "params": {"draw_method": "none", "animation_loop": "none", "color_scheme": ["#07070A"], "responsiveness": "native HTML layout", "interaction": "none"}
+    },
+    "svg_animations": {
+      "enabled": false,
+      "type": "none",
+      "description": "The logo is static; no decorative path animation is used",
+      "params": {"animation_method": "none", "path_morphing": "none", "stroke_animation": "none", "filter_effects": ["none"]}
+    },
+    "composite_notes": "The only visual flourish is a hard violet-tinted offset behind the proof console. All other hierarchy is produced by type, rules, and semantic status colors so the interface remains fast, legible, and credible on low-power devices."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "mandatelab",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "contracts:compile": "hardhat compile",
+    "contracts:test": "hardhat test",
+    "contracts:deploy:testnet": "hardhat run scripts/deploy.ts --network monadTestnet",
+    "test:policy": "vitest run lib/policy.test.ts",
+    "test": "npm run test:policy && npm run contracts:test"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "viem": "latest"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-mocha-ethers": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "hardhat": "latest",
+    "typescript": "latest",
+    "vitest": "latest"
+  }
+}
