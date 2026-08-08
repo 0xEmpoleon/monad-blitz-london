@@ -102,11 +102,11 @@ Monad trading, lending, rebalancing, or machine-payment adapters.”
 ### Repository
 
 - [x] Forked from the required London starter.
-- [ ] Push the tested product branch to the public fork after GitHub authentication.
+- [x] Push the tested product branch to the public fork.
 - [x] README explains what it does and how to run it.
 - [x] `.env.example` contains no secret value.
 - [x] Contract and policy tests pass.
-- [ ] Merge or submit the correct public branch.
+- [x] Open PR #1 from the tested branch into `main` with passing Vercel checks.
 
 ### Monad
 
@@ -151,16 +151,13 @@ npm test
 npm run build
 ```
 
-Authenticate the external services in the VS Code terminal:
+For future changes, create a small branch, verify it, then push and deploy:
 
 ```bash
-gh auth login
-```
-
-Then push and deploy:
-
-```bash
-git push -u origin build/mandatelab-mvp
+git switch -c update/mandatelab
+npm test
+npm run build
+git push -u origin update/mandatelab
 npx vercel --prod
 ```
 

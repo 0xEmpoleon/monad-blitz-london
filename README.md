@@ -37,16 +37,15 @@ The API explains. The contract decides.
 | Requirement | Status | Evidence |
 | --- | --- | --- |
 | Built from the London starter fork | Complete | Local branch preserves the starter history |
-| Public source branch | Pending | Push after `gh auth login` restores GitHub access |
+| Public source branch | Complete | `build/mandatelab-mvp` and PR #1 |
 | Proper README and setup | Complete | This document |
 | Working web application | Live | https://mandatelab.vercel.app |
 | Contract and adversarial tests | Complete | 5 Solidity tests + 3 policy-engine tests |
 | Monad deployment | Pending | Must use an event-window deployment and funded testnet key |
 | Network | Selected | Monad Testnet, chain ID `10143` |
 
-The tested branch and contract addresses will be published immediately after
-GitHub authentication and the qualifying deployment. No source state or address
-is claimed before it is verifiable.
+The tested source is public. Contract addresses will be published immediately
+after the qualifying deployment. No address is claimed before it is verifiable.
 
 ## What makes it different
 

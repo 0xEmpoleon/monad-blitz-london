@@ -31,7 +31,7 @@ The three-minute proof is:
 | Submission README/docs | Complete | Setup, differentiation, security, portal copy |
 | Presentation | Complete | Five-slide PPTX and PDF rendered, inspected, and overflow-tested |
 | Vercel | Complete | https://mandatelab.vercel.app verified |
-| GitHub handoff | Blocked on authentication | Branch pushed to public fork |
+| GitHub handoff | Complete | Branch pushed; PR #1 open, mergeable, and Vercel checks green |
 | Monad deployment | Blocked on event key/window | Verified testnet addresses and receipts |
 
 ## Implemented scope
@@ -65,26 +65,7 @@ These remain out of the MVP until qualification is complete:
 
 ## Remaining critical path
 
-### 1. Restore GitHub authentication
-
-In the user's VS Code terminal:
-
-```bash
-gh auth login
-```
-
-Do not paste credentials or a private key into chat.
-
-### 2. Push the exact tested branch
-
-```bash
-npm test
-npm run build
-git status
-git push -u origin build/mandatelab-mvp
-```
-
-### 3. Deploy contracts during the Blitz
+### 1. Deploy contracts during the Blitz
 
 - Confirm the event deployment window.
 - Fund a dedicated Monad Testnet account.
@@ -95,14 +76,14 @@ git push -u origin build/mandatelab-mvp
 - Store only public addresses in Vercel.
 - Re-deploy the web app so explorer links activate.
 
-### 4. Publish the verified onchain evidence
+### 2. Publish the verified onchain evidence
 
 - Add public contract addresses to Vercel environment variables.
 - Redeploy the web app so explorer links activate.
 - Add explorer links to README, the deck, and the portal copy.
 - Re-run the live allow and deny paths.
 
-### 5. Submit and rehearse
+### 3. Submit and rehearse
 
 - Paste the portal copy from `docs/SUBMISSION.md`.
 - Upload `public/brand/mandatelab-header-dark.png`.
