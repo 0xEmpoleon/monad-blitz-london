@@ -106,7 +106,7 @@ Monad trading, lending, rebalancing, or machine-payment adapters.”
 - [x] README explains what it does and how to run it.
 - [x] `.env.example` contains no secret value.
 - [x] Contract and policy tests pass.
-- [x] Open PR #1 from the tested branch into `main` with passing Vercel checks.
+- [x] Merge PR #1 from the tested branch into `main` with passing Vercel checks.
 
 ### Monad
 

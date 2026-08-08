@@ -1,7 +1,7 @@
 # MandateLab build plan
 
 Last updated: 8 August 2026  
-Branch: `build/mandatelab-mvp`  
+Release: `main` via PR #1 from `build/mandatelab-mvp`  
 Target: Monad Blitz London
 
 ## Product decision
@@ -31,7 +31,7 @@ The three-minute proof is:
 | Submission README/docs | Complete | Setup, differentiation, security, portal copy |
 | Presentation | Complete | Five-slide PPTX and PDF rendered, inspected, and overflow-tested |
 | Vercel | Complete | https://mandatelab.vercel.app verified |
-| GitHub handoff | Complete | Branch pushed; PR #1 open, mergeable, and Vercel checks green |
+| GitHub handoff | Complete | PR #1 merged into `main`; Vercel checks green |
 | Monad deployment | Blocked on event key/window | Verified testnet addresses and receipts |
 
 ## Implemented scope
